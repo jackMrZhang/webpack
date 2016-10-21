@@ -1,0 +1,9 @@
+webpack
+（前期的webpack安装可以参考网上的文档）
+个人小结：
+1:对于打包的对象，不能不能使样式表的样式重复，否则，不同的文件引用同一个打包好的
+bundle.js文件时，会出现样式错乱的现象，
+2：对于样式表里引用的背景图片可以下载webpack url-loader --save -dev实现对图片的打包
+	当然需要在webpack.config.js里配置正则
+	{test:/\.(png|jpg)$/,loader:"url"};
+3:特别要注意，路径文件里对require文件的路径一定要写好
